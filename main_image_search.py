@@ -74,24 +74,24 @@ class functions:
         driver.execute_script("window.scrollBy(0,5000)", "")
         time.sleep(5)
 
-    # def delete_pop_up(self):
-    #     print("================================================================")
-    #     self.driver.switch_to.frame("callout")
-    #     time.sleep(3)
-    #     self.driverfind_element(
-    #         By.XPATH, "//button[@aria-label='No thanks']").click()
-    #     time.sleep(3)
+    def delete_pop_up(self):
+        print("================================================================")
+        self.driver.switch_to.frame("callout")
+        time.sleep(3)
+        self.driverfind_element(
+            By.XPATH, "//button[@aria-label='No thanks']").click()
+        time.sleep(3)
 
-    # def mouse_movement(self):
-    #     print("================================================================")
-    #     action = ActionChains(self.driver)
-    #     firstLevelMenu = driver.find_element(By.ID, "APjFqb")
-    #     action.move_to_element(firstLevelMenu).perform()
-    #     time.sleep(3)
-    #     secondLevelMenu = driver.find_element(
-    #         By.XPATH, "//a[@aria-label='Google apps']")
-    #     action.move_to_element(secondLevelMenu).perform()
-    #     time.sleep(3)
+    def mouse_movement(self):
+        print("================================================================")
+        action = ActionChains(self.driver)
+        firstLevelMenu = driver.find_element(By.ID, "APjFqb")
+        action.move_to_element(firstLevelMenu).perform()
+        time.sleep(3)
+        secondLevelMenu = driver.find_element(
+            By.XPATH, "//a[@aria-label='Google apps']")
+        action.move_to_element(secondLevelMenu).perform()
+        time.sleep(3)
 
 
 # input_intake = input("Enter the image name need to be searched  ")
