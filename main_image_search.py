@@ -52,7 +52,7 @@ class functions:
         action.move_to_element(firstLevelMenu).perform()
         time.sleep(3)
         secondLevelMenu = driver.find_element(
-            By.XPATH, "//a[@aria-label='Google apps']")
+            By.XPATH, "//a[@aria-label='Search for Images (opens a new tab)']")
         action.move_to_element(secondLevelMenu).perform()
         time.sleep(3)
 
@@ -71,27 +71,29 @@ class functions:
             By.XPATH, "//span[@class='z1asCe MZy1Rb']//*[name()='svg']")
 
         e.click()
-        driver.execute_script("window.scrollBy(0,5000)", "")
+        driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+        time.sleep(2)
+        driver.execute_script("window.scrollTo(document.body.scrollHeight,0)")
         time.sleep(5)
 
-    def delete_pop_up(self):
-        print("================================================================")
-        self.driver.switch_to.frame("callout")
-        time.sleep(3)
-        self.driverfind_element(
-            By.XPATH, "//button[@aria-label='No thanks']").click()
-        time.sleep(3)
+    # def delete_pop_up(self):
+    #     print("================================================================")
+    #     self.driver.switch_to.frame("callout")
+    #     time.sleep(3)
+    #     self.driverfind_element(
+    #         By.XPATH, "//button[@aria-label='No thanks']").click()
+    #     time.sleep(3)
 
-    def mouse_movement(self):
-        print("================================================================")
-        action = ActionChains(self.driver)
-        firstLevelMenu = driver.find_element(By.ID, "APjFqb")
-        action.move_to_element(firstLevelMenu).perform()
-        time.sleep(3)
-        secondLevelMenu = driver.find_element(
-            By.XPATH, "//a[@aria-label='Google apps']")
-        action.move_to_element(secondLevelMenu).perform()
-        time.sleep(3)
+    # def mouse_movement(self):
+    #     print("================================================================")
+    #     action = ActionChains(self.driver)
+    #     firstLevelMenu = driver.find_element(By.ID, "APjFqb")
+    #     action.move_to_element(firstLevelMenu).perform()
+    #     time.sleep(3)
+    #     secondLevelMenu = driver.find_element(
+    #         By.XPATH, "//a[@aria-label='Google apps']")
+    #     action.move_to_element(secondLevelMenu).perform()
+    #     time.sleep(3)
 
 
 # input_intake = input("Enter the image name need to be searched  ")
