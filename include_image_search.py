@@ -32,4 +32,4 @@ from main_image_search import functions
 #     time.sleep(3)
 
 input_intake = input("Enter the image name need to be searched  ")
-functions.automation(Self, input_intake)
+functions.automation(Self, input_intake,"https://www.google.com")

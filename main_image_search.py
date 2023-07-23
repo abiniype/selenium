@@ -20,9 +20,9 @@ class functions:
         self.switch_to = switch_to
         self.find_element = find_element
 
-    def automation(self, message):
+    def automation(self, message,webpage):
         driver = webdriver.Chrome()
-        driver.get("https://www.google.com")
+        driver.get(webpage)
         driver.maximize_window()
         # include_image_search.mouse_movement(self)
 
